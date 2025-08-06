@@ -10,6 +10,9 @@ rm development.sqlite3
 # delete gauze project
 rm -rf demo
 
+# install gauze
+npm install
+
 # create gauze project
 npx gauze create project demo
 
@@ -20,6 +23,10 @@ npx gauze project demo create entity demo ./entities/comment.js
 # copy migration files, schemas, and relationships
 ./bin/copy
 
+# run the migrations
+npx gauze project demo migrate run
+
 # build the frontend
 npx gauze project demo application build
+
 
