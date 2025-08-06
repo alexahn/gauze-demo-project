@@ -1,0 +1,12 @@
+#!/bin/zsh
+
+# copy migrations
+cp ./migrations/20250806002625_post.js ./demo/database/migrations/20250806002625_post.js
+cp ./migrations/20250806002631_comment.js ./demo/database/migrations/20250806002631_comment.js
+
+# copy schemas
+cp ./schemas/database.js ./demo/database/interfaces/graphql/schema.js
+cp ./schemas/system.js ./demo/system/interfaces/graphql/schema.js
+
+# copy relationships
+cp ./relationships.js ./demo/structure/relationships.js

@@ -1,0 +1,25 @@
+#!/bin/zsh
+
+# delete existing cli
+rm -rf node_modules
+rm package-lock.json
+
+# delete local database
+rm development.sqlite3
+
+# delete gauze project
+rm -rf demo
+
+# create gauze project
+npx gauze create project demo
+
+# add entities to gauze project
+npx gauze project demo create entity demo ./entities/post.js
+npx gauze project demo create entity demo ./entities/comment.js
+
+# copy migration files, schemas, and relationships
+./bin/copy
+
+# build the frontend
+npx gauze project demo application build
+
