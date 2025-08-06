@@ -1,0 +1,7 @@
+{
+  "type": "module",
+  "dependencies": {
+    "@ahn/gauze": "git://github.com/alexahn/gauze.git"
+  },
+  "version": "0.0.1"
+}
