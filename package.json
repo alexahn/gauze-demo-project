@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "@ahn/gauze": "0.0.4"
+    "@ahn/gauze": "0.0.5"
   },
   "version": "0.0.1"
 }
