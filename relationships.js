@@ -1,14 +1,26 @@
 // relationships are defined using the graphql type constant
 
+// agent root
+import { TYPE__GRAPHQL__DATABASE__AGENT_ROOT__STRUCTURE } from "./entities/agent_root/database/graphql.js";
+// agent account
+import { TYPE__GRAPHQL__DATABASE__AGENT_ACCOUNT__STRUCTURE } from "./entities/agent_account/database/graphql.js";
 // agent user
 import { TYPE__GRAPHQL__DATABASE__AGENT_USER__STRUCTURE } from "./entities/agent_user/database/graphql.js";
+// agent person
+import { TYPE__GRAPHQL__DATABASE__AGENT_PERSON__STRUCTURE } from "./entities/agent_person/database/graphql.js";
+// agent character
+import { TYPE__GRAPHQL__DATABASE__AGENT_CHARACTER__STRUCTURE } from "./entities/agent_character/database/graphql.js";
 // post
 import { TYPE__GRAPHQL__DATABASE__POST__STRUCTURE } from "./entities/post/database/graphql.js";
 // comment
 import { TYPE__GRAPHQL__DATABASE__COMMENT__STRUCTURE } from "./entities/comment/database/graphql.js";
 
 const DATABASE_RELATIONSHIPS__RELATIONSHIP__STRUCTURE = {
+	[TYPE__GRAPHQL__DATABASE__AGENT_ROOT__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__POST__STRUCTURE],
+	[TYPE__GRAPHQL__DATABASE__AGENT_ACCOUNT__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__POST__STRUCTURE]
 	[TYPE__GRAPHQL__DATABASE__AGENT_USER__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__POST__STRUCTURE],
+	[TYPE__GRAPHQL__DATABASE__AGENT_PERSON__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__POST__STRUCTURE],
+	[TYPE__GRAPHQL__DATABASE__AGENT_CHARACTER__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__POST__STRUCTURE],
 	[TYPE__GRAPHQL__DATABASE__POST__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__COMMENT__STRUCTURE],
 	[TYPE__GRAPHQL__DATABASE__COMMENT__STRUCTURE]: [TYPE__GRAPHQL__DATABASE__COMMENT__STRUCTURE]
 };

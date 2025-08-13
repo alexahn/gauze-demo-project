@@ -20,7 +20,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			created_at: {
 				name: "created_at",
@@ -35,7 +35,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [$abstract.gauze.deserializers.CREATED_AT__DESERIALIZER__GAUZE__ABSTRACT("created_at")],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			updated_at: {
 				name: "updated_at",
@@ -50,7 +50,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [$abstract.gauze.deserializers.UPDATED_AT__DESERIALIZER__GAUZE__ABSTRACT("updated_at")],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			deleted_at: {
 				name: "deleted_at",
@@ -65,7 +65,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [$abstract.gauze.deserializers.DELETED_AT__DESERIALIZER__GAUZE__ABSTRACT("deleted_at")],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			author: {
 				name: "author",
@@ -83,7 +83,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			title: {
 				name: "title",
@@ -101,7 +101,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			body: {
 				name: "body",
@@ -119,7 +119,7 @@ export default function ($abstract) {
 				pre_deserialize_middlewares: [],
 				deserializers: [],
 				post_deserialize_middlewares: [],
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 		},
 		// todo: update these names to match the graphql operation names, or add a new field called graphql_operation_name
@@ -127,27 +127,27 @@ export default function ($abstract) {
 			create: {
 				name: "create",
 				privacy: "public",
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			read: {
 				name: "read",
 				privacy: "public",
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			update: {
 				name: "update",
 				privacy: "public",
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			delete: {
 				name: "delete",
 				privacy: "public",
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 			count: {
 				name: "count",
 				privacy: "public",
-				allowed_agent_types: ["gauze__agent_user"],
+				allowed_agent_types: ["gauze__agent_root", "gauze__agent_account", "gauze__agent_user", "gauze__agent_person", "gauze__agent_character"],
 			},
 		},
 	};
